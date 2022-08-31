@@ -563,7 +563,7 @@ In case of input data being supplied to the question, it should be assumed to be
 ```python
 import math
 
-x, y = 0, 0
+y, z = 0, 0
 
 while True:
     step = input("Type in UP/DOWN/LEFT/RIGHT #step number: ")
@@ -575,17 +575,17 @@ while True:
         step = step.split(" ")
 
         if step[0] == "UP":
-            y = y + int(step[1])
+            z = z + int(step[1])
         elif step[0] == "DOWN":
-            y = y - int(step[1])
+            z = z - int(step[1])
         elif step[0] == "LEFT":
-            x = x - int(step[1])
+            y = y - int(step[1])
         elif step[0] == "RIGHT":
-            x = x + int(step[1])
+            y = y + int(step[1])
 
-c = math.sqrt(x**2 + y**2)
+d = math.sqrt(y**2 + z**2)
 
-print("Distance:", c)
+print("Distance covered:", d)
 ```
 ### Question 22
 Level 3
@@ -682,20 +682,20 @@ Define a instance parameter, need add it in __init__ method
 You can init a object with construct parameter or set the value later
 
 ```python
-class Person:
+class individual:
     # Define the class parameter "name"
-    name = "Person"
+    name = "individual"
     
     def __init__(self, name = None):
         # self.name is the instance parameter
         self.name = name
 
-jeffrey = Person("Jeffrey")
-print("%s name is %s" % (Person.name, jeffrey.name))
+sam = individual("Sam")
+print("%s name is %s" % (individual.name, sam.name))
 
-nico = Person()
-nico.name = "Nico"
-print("%s name is %s" % (Person.name, nico.name))
+kasee = individual()
+kasee.name = "Kasee"
+print("%s name is %s" % (individual.name, kasee.name))
 ```
 ### Question 26:
 Define a function which can compute the sum of two numbers.
@@ -750,9 +750,9 @@ Use int() to convert a string to integer.
 # a, b - integral numbers in string format
 # return: sum of the numbers in integer format
 
-def calculateSum (a,b):
-	s = int(a) + int(b)
-	return s 
+def calculateSum (x,y):
+	sm = int(x) + int(y)
+	return sm 
 
 # Main code 
 # take two integral numbers as strings
@@ -810,7 +810,7 @@ Hints:
 
 Use % operator to check if a number is even or odd.
 
-```pytho
+```python
 def checkValue(n):
     if n%2 == 0:
         print("It is an even number")
@@ -940,10 +940,10 @@ Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
 ```python
 def printList():
-	li=list()
+	l=list()
 	for i in range(1,21):
-		li.append(i**2)
-	print(li[-5:])
+		l.append(i**2)
+	print(l[-5:])
 
 printList()
 ```
@@ -959,10 +959,10 @@ Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
 ```python
 def printList():
-	li=list()
+	l=list()
 	for i in range(1,21):
-		li.append(i**2)
-	print li[5:]
+		l.append(i**2)
+	print l[5:]
 
 printList()
 ```
@@ -993,13 +993,13 @@ Hints:
 Use [n1:n2] notation to get a slice from a tuple.
 
 ```python
-tpl = (1,2,3,4,5,6,7,8,9,10)
+tp = (1,2,3,4,5,6,7,8,9,10)
 
 for i in range(0,5):
-    print(tpl[i],end = ' ')
+    print(tp[i],end = ' ')
 print()
 for i in range(5,10):
-    print(tpl[i],end = ' ')
+    print(tp[i],end = ' ')
 
 ```
 ### Question 43
@@ -1011,9 +1011,9 @@ Use "for" to iterate the tuple
 Use tuple() to generate a tuple from a list.
 
 ```python
-tpl = (1,2,3,4,5,6,7,8,9,10)
-tpl1 = tuple(i for i in tpl if i%2 == 0)
-print(tpl1)
+tp = (1,2,3,4,5,6,7,8,9,10)
+tp1 = tuple(i for i in tp if i%2 == 0)
+print(tp1)
 ```
 
 ### Question 44
@@ -1052,8 +1052,8 @@ Hints
 Use map() to generate a list.
 Use lambda to define anonymous functions.
 ```python
-li = [1,2,3,4,5,6,7,8,9,10]
-squaredNumbers = map(lambda x: x**2, li)  # returns map type object data
+l = [1,2,3,4,5,6,7,8,9,10]
+squaredNumbers = map(lambda x: x**2, l)  # returns map type object data
 print(list(squaredNumbers)) 
 ```
 ### Question 47
@@ -1065,9 +1065,9 @@ Use filter() to filter elements of a list.
 Use lambda to define anonymous functions.
 
 ```python
-li = [1,2,3,4,5,6,7,8,9,10]
+l = [1,2,3,4,5,6,7,8,9,10]
  
-eve_num = map(lambda x: x**2, filter(lambda   x: x%2==0, li))
+eve_num = map(lambda x: x**2, filter(lambda   x: x%2==0, l))
  
 print(eve_num)
 
@@ -1093,8 +1093,8 @@ Use map() to generate a list.
 Use lambda to define anonymous functions.
 
 ```python
-li = range(1,21)
-evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, li))
+l = range(1,21)
+evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, l))
 print evenNumbers
 ```
 ### Question 50
@@ -1277,8 +1277,8 @@ import re
 
 email = "john@google.com elise@python.com"
 pattern = "\w+@(\w+).com"
-ans = re.findall(pattern,email)
-print(ans)
+answer = re.findall(pattern,email)
+print(answer)
 ```
 ### Question 59
 Assuming that we have some email addresses in the "username@companyname.com" format, please write program to print the company name of a given email address. Both user names and company names are composed of letters only.
@@ -1303,8 +1303,8 @@ import re
 
 email = "john@google.com elise@python.com"
 pattern = "\w+@(\w+).com"
-ans = re.findall(pattern,email)
-print(ans)
+answer = re.findall(pattern,email)
+print(answer)
 ```
 
 ### Question 60
@@ -1330,8 +1330,8 @@ import re
 
 email = input()
 pattern = "\d+"
-ans = re.findall(pattern,email)
-print(ans)
+answer = re.findall(pattern,email)
+print(answer)
 ```
 ### Question 61
 Print a unicode string "hello world".
@@ -1350,9 +1350,9 @@ Hints:
 
 Use unicode() function to convert.
 ```python
-k = input()
-o = k.encode('utf-8')
-print(o)
+o = input()
+l = o.encode('utf-8')
+print(l)
 ```
 ### Question 63
 
@@ -1557,11 +1557,11 @@ In case of input data being supplied to the question, it should be assumed to be
 ```python
 def generate(n):
     for i in range(n+1):
-        if i % 35 == 0:    # 5*7 = 35, if a number is divisible by a & b then it is also divisible by a*b
-            yield i
+        if u % 35 == 0:    # 5*7 = 35, if a number is divisible by j & v then it is also divisible by j*v
+            yield u
 
 n = int(input())
-resp = [str(i) for i in generate(n)]
+resp = [str(u) for u in generate(n)]
 print(",".join(resp))
 
 ```
@@ -1594,8 +1594,8 @@ Use eval() to evaluate an expression.
 
 ```python
 expression = input()
-ans = eval(expression)
-print(ans)
+result = eval(expression)
+print(result)
 ```
 
 ### Question 72
@@ -1605,21 +1605,21 @@ Hints:
 Use if/elif to deal with conditions.
 
 ```python
-idx = 0
-def bs(num,num_list):
-    global idx
+ib = 0
+def b(num,num_list):
+    global ib
     if (len(num_list) == 1):
         if num_list[0] == num:
-            return idx
+            return ib
         else:
             return "No exit in the list"
     elif num in num_list[:len(num_list)//2]:
-        return bs(num,num_list[:len(num_list)//2])
+        return b(num,num_list[:len(num_list)//2])
     else:
         idx += len(num_list)//2
-    return bs(num,num_list[len(num_list)//2:])
+    return b(num,num_list[len(num_list)//2:])
 
-print(bs(66,[1,5,8,10,12,13,55,66,73,78,82,85,88,99,100]))
+print(b(66,[1,5,8,10,12,13,55,66,73,78,82,85,88,99,100]))
 
 ```
 ### Question 73
@@ -1630,24 +1630,24 @@ Use if/elif to deal with conditions.
 
 ```python
 import math
-def bin_search(li, element):
+def bin_search(lis, element):
     bottom = 0
-    top = len(li)-1
+    top = len(lis)-1
     index = -1
     while top>=bottom and index==-1:
         mid = int(math.floor((top+bottom)/2.0))
-        if li[mid]==element:
+        if lis[mid]==element:
             index = mid
-        elif li[mid]>element:
+        elif lis[mid]>element:
             top = mid-1
         else:
             bottom = mid+1
 
     return index
 
-li=[2,5,7,9,11,17,222]
-print bin_search(li,11)
-print bin_search(li,12)
+lis=[2,5,7,9,11,17,222]
+print bin_search(lis,11)
+print bin_search(lis,12)
 ```
 
 ### Question 74
@@ -1689,9 +1689,9 @@ Hints:
 Use random.choice() to a random element from a list.
 
 ```python
-li = [2,4,6,8]
+i = [2,4,6,8]
 import random
-print random.choice([i for i in range(11) if i%2==0])
+print random.choice([c for c in range(11) if c%2==0])
 ```
 ### Question 78
 Please write a program to generate a list with 5 random numbers between 100 and 200 inclusive.
@@ -1701,8 +1701,8 @@ Use random.sample() to generate a list of random values.
 
 ```python
 import random
-resp = random.sample(range(100,201),5)
-print(resp)
+r = random.sample(range(100,201),5)
+print(re)
 ```
 ### Question 79
 Please write a program to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
@@ -1712,8 +1712,8 @@ Use random.sample() to generate a list of random values.
 
 ```python
 import random
-resp = random.sample(range(100,201),5)
-print(resp)
+r = random.sample(range(100,201),5)
+print(re)
 ```
 ### Question 80
 Please write a program to randomly generate a list with 5 numbers, which are divisible by 5 and 7 , between 1 and 1000 inclusive.
@@ -1723,9 +1723,9 @@ Use random.sample() to generate a list of random values.
 
 ```python
 import random
-lst = [i for i in range(1,1001) if i%35 == 0]
-resp = random.sample(lst,5)
-print(resp)
+ls = [i for i in range(1,1001) if i%35 == 0]
+out = random.sample(ls,5)
+print(out)
 ```
 ### Question 81
 Please write a program to randomly print a integer number between 7 and 15 inclusive.
@@ -1744,10 +1744,10 @@ Hints:
 Use zlib.compress() and zlib.decompress() to compress and decompress a string.
 ```python
 import zlib
-s = 'hello world!hello world!hello world!hello world!'
-t = zlib.compress(s)
-print t
-print zlib.decompress(t)
+l = 'hello world!hello world!hello world!hello world!'
+r = zlib.compress(l)
+print r
+print zlib.decompress(r)
 ```
 ### Question 83
 Please write a program to print the running time of execution of "1+1" for 100 times.
@@ -1758,8 +1758,8 @@ Use timeit() function to measure the running time.
 ```python
 
 from timeit import Timer
-t = Timer("for i in range(100):1+1")
-print t.timeit()
+time = Timer("for i in range(100):1+1")
+print time.timeit()
 ```
 ### Question 84
 Please write a program to shuffle and print the list [3,6,7,8].
@@ -1770,9 +1770,9 @@ Use shuffle() function to shuffle a list.
 
 import random
 
-lst = [3,6,7,8]
-random.shuffle(lst)
-print(lst)
+ls = [3,6,7,8]
+random.shuffle(ls)
+print(ls)
 ```
 ### Question 85
 Please write a program to shuffle and print the list [3,6,7,8].
@@ -1783,9 +1783,9 @@ Use shuffle() function to shuffle a list.
 ```python
 import random
 
-lst = [3,6,7,8]
-random.shuffle(lst)
-print(lst)
+ls = [3,6,7,8]
+random.shuffle(ls)
+print(ls)
 ```
 ### Question 86
 Please write a program to generate all sentences where subject is in ["I", "You"] and verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
@@ -1810,9 +1810,9 @@ Hints:
 Use list comprehension to delete a bunch of element from a list.
 
 ```python
-li = [5,6,77,45,22,12,24]
-li = [x for x in li if x%2!=0]
-print li
+ls = [5,6,77,45,22,12,24]
+ls = [x for x in ls if x%2!=0]
+print ls
 ```
 ### Question 88
 By using list comprehension, please write a program to print the list after removing delete numbers which are divisible by 5 and 7 in [12,24,35,70,88,120,155].
@@ -1820,9 +1820,9 @@ By using list comprehension, please write a program to print the list after remo
 Hints:
 Use list comprehension to delete a bunch of element from a list.
 ```python
-li = [12,24,35,70,88,120,155]
-li = [x for x in li if x % 35!=0]
-print(li)
+lis = [12,24,35,70,88,120,155]
+lis = [x for x in lis if x % 35!=0]
+print(lis)
 ```
 ### Question 89
 By using list comprehension, please write a program to print the list after removing the 0th, 2nd, 4th,6th numbers in [12,24,35,70,88,120,155].
@@ -1833,10 +1833,9 @@ Use enumerate() to get (index, value) tuple.
 ```python
 
 
-li = [12,24,35,70,88,120,155]
-li = [x for (i,x) in enumerate(li) if i%2 != 0 and i <= 6]
-print li
-
+lst = [12,24,35,70,88,120,155]
+lst = [x for (i,x) in enumerate(li) if i%2 != 0 and i <= 6]
+print(lst)
 ```
 ### Question 90
 By using list comprehension, please write a program generate a 3*5*8 3D array whose each element is 0.
@@ -1854,9 +1853,9 @@ Hints:
 Use list comprehension to delete a bunch of element from a list.
 Use enumerate() to get (index, value) tuple.
 ```python
-li = [12,24,35,70,88,120,155]
-li = [li[i] for i in range(len(li)) if i not in (0,4,5)]
-print(li)
+n = [12,24,35,70,88,120,155]
+n = [n[i] for i in range(len(n)) if i not in (0,4,5)]
+print(n)
 ```
 ### Question 92
 By using list comprehension, please write a program to print the list after removing the value 24 in [12,24,35,24,88,120,155].
@@ -1864,9 +1863,9 @@ By using list comprehension, please write a program to print the list after remo
 Hints:
 Use list's remove method to delete a value.
 ```python
-li = [12,24,35,24,88,120,155]
-li = [x for x in li if x!=24]
-print li
+q = [12,24,35,24,88,120,155]
+q = [x for x in q if x!=24]
+print(q)
 ```
 ### Question 93
 With two given lists [1,3,6,78,35,55] and [12,24,35,24,88,120,155], write a program to make a list whose elements are intersection of the above given lists.
@@ -1887,11 +1886,11 @@ With a given list [12,24,35,24,88,120,155,88,120,155], write a program to print 
 Hints:
 Use set() to store a number of values without duplicate.
 ```python
-li = [12,24,35,24,88,120,155,88,120,155]
-for i in li:
-    if li.count(i) > 1:
-        li.remove(i)
-print(li)
+ls = [12,24,35,24,88,120,155,88,120,155]
+for i in ls:
+    if ls.count(i) > 1:
+        ls.remove(i)
+print(ls)
 ```
 ### Question 95
 Define a class Person and its two child classes: Male and Female. All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
@@ -1899,8 +1898,6 @@ Define a class Person and its two child classes: Male and Female. All classes ha
 Hints:
 Use Subclass(Parentclass) to define a child class.
 ```python
-'''Solution by: popomaticbubble
-'''
 class Person(object):
     def __init__(self):
 	self.gender = "unknown"
@@ -1916,10 +1913,10 @@ class Female(Person):
     def __init__(self):
 	self.gender = "Female"
 
-sharon = Female()
-doug = Male()
-sharon.getGender()
-doug.getGender()
+cate = Female()
+mike = Male()
+cate.getGender()
+mike.getGender()
 
 ```
 ### Question 96
@@ -1946,11 +1943,11 @@ Use dict.get() method to lookup a key with default value.
 ```python
 import string
 
-s = input()
-for letter in string.ascii_lowercase:
-    cnt = s.count(letter)
-    if cnt > 0:
-        print("{},{}".format(letter,cnt))
+h = input()
+for i in string.ascii_lowercase:
+    f = h.count(i)
+    if f > 0:
+        print("{},{}".format(i,f))
 
 ```
 ### Question 97
@@ -1968,9 +1965,9 @@ ris etov ot esir
 Hints:
 Use list[::-1] to iterate a list in a reverse order.
 ```python
-s=raw_input()
-s = s[::-1]
-print(s)
+t=raw_input()
+t = t[::-1]
+print(t)
 ```
 ### Question 98
 Please write a program which accepts a string from console and print the characters that have even indexes.
@@ -1987,9 +1984,9 @@ Helloworld
 Hints:
 Use list[::2] to iterate a list by step 2.
 ```python
-s=raw_input()
-s = s[::2]
-print s
+r=raw_input()
+r = s[::2]
+print(r)
 ```
 ### Question 99
 Please write a program which prints all permutations of [1,2,3]
@@ -1999,7 +1996,7 @@ Use itertools.permutations() to get permutations of list.
 ```python
 
 import itertools
-print list(itertools.permutations([1,2,3]))
+print(list(itertools.permutations([1,2,3])))
 ```
 ### Question 100
 Write a program to solve a classic ancient Chinese puzzle: 
@@ -2009,12 +2006,12 @@ Hint:
 Use for loop to iterate all possible solutions.
 ```python
 def solve(numheads,numlegs):
-    ns='No solutions!'
-    for i in range(numheads+1):
-        j=numheads-i
-        if 2*i+4*j==numlegs:
-            return i,j
-    return ns,ns
+    n='No solutions!'
+    for e in range(numheads+1):
+        w=numheads-i
+        if 2*e+4*w==numlegs:
+            return e,w
+    return n,n
 
 numheads = 35
 numlegs = 94
