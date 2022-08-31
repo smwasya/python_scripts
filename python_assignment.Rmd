@@ -81,9 +81,9 @@ Then, the output should be:
 
 
 ```python
-li = ['2', '3', '4', '4']
-print(li)
-print(tuple(li))
+lst = ['2', '3', '4', '4']
+print(lst)
+print(tuple(lst))
 ```
 
 ### Question5
