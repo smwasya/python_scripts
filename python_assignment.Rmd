@@ -61,11 +61,11 @@ Then, the output should be:
 
 
 ```python
-e = dict()
-n = 5
+d = dict()
+k = 5
 for c in range(1,n+1):
-    e[c]= c**2
-print(e)    
+    d[c]= c**2
+print(d)    
 ```
 
 ### Question 4
@@ -81,9 +81,9 @@ Then, the output should be:
 
 
 ```python
-f = ['2', '3', '4', '4']
-print(f)
-print(tuple(f))
+li = ['2', '3', '4', '4']
+print(li)
+print(tuple(li))
 ```
 
 ### Question5
@@ -213,14 +213,14 @@ In case of input data being supplied to the question, it should be assumed to be
 ```python
 lines = []
 while True:
-    l = input()
-    if l:
-        lines.append(l.upper())
+    x = input()
+    if x:
+        lines.append(x.upper())
     else:
         break;
 
-for l in lines:
-    print(l)
+for x in lines:
+    print(x)
 ```
 ### Question 10
 Level 2
@@ -256,11 +256,11 @@ Notes: Assume the data is input by console.
 
 ```python
 value = []
-items=[x for x in raw_input().split(',')]
+items=[b for b in raw_input().split(',')]
 for p in items:
-    intp = int(p, 2)
-    if not intp%5:
-        value.append(p)
+    intp = int(i, 2)
+    if not int(i%5):
+        value.append(i)
 
 print ','.join(value)
 
@@ -299,17 +299,17 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 ```python
-s = input("Input a string")
-d=l=0
-for c in s:
+st = input("Input a string")
+k=i=0
+for b in s:
     if c.isdigit():
-        d=d+1
-    elif c.isalpha():
-        l=l+1
+        k=k+1
+    elif b.isalpha():
+        i=i+1
     else:
         pass
-print("Letters", l)
-print("Digits", d)
+print("Letters", i)
+print("Digits", k)
 ```
 
 ### Question 14
@@ -327,7 +327,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
 ```python
-Str="GeeksForGeeks"
+Str="Hello world!"
 lower=0
 upper=0
 for i in Str:
@@ -373,14 +373,14 @@ In case of input data being supplied to the question, it should be assumed to be
 
 ```python
 # create a list with 7 integer elements
-data=[1,2,3,4,5,6,7,8,9]
+lis=[1,2,3,4,5,6,7,8,9]
 
 # use list comprehension to get square
 # of odd numbers
-result = [i*i for i in data if i%2!=0]
+out = [i*i for i in lis if i%2!=0]
 
 # display the result
-print(result)
+print(out)
 
 ```
 ### Question 17
@@ -494,14 +494,14 @@ In case of input data being supplied to the question, it should be assumed to be
 We use itemgetter to enable multiple sort keys.
 
 ```python
-p = []
+r = []
 while True:
-    l = raw_input()
-    if not l:
+    s = raw_input()
+    if not s:
         break
-    p.append(tuple(l.split(",")))
+    r.append(tuple(s.split(",")))
 
-print sorted(p, key=itemgetter(0,1,2))
+print(sorted(r, key=itemgetter(0,1,2)))
 
 
 
@@ -519,61 +519,24 @@ Consider use yield
 Python
 def putNumbers(n):
 
-    i = 0
+    x = 0
 
-    while i<n:
+    while x<n:
 
-        j=i
+        m=i
 
-        i=i+1
+        x=x+1
 
-        if j%7==0:
+        if m%7==0:
 
-            yield j
+            yield m
 
 
 
-for i in putNumbers(100):
+for x in putNumbers(100):
 
-    print i
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-def putNumbers(n):
- 
-    i = 0
- 
-    while i<n:
- 
-        j=i
- 
-        i=i+1
- 
-        if j%7==0:
- 
-            yield j
- 
- 
- 
-for i in putNumbers(100):
- 
-    print(i)
+    print x
+
 ```
 ### Question 21
 Level 3
