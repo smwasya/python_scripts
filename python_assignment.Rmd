@@ -1965,7 +1965,7 @@ ris etov ot esir
 Hints:
 Use list[::-1] to iterate a list in a reverse order.
 ```python
-t=raw_input()
+t=input()
 t = t[::-1]
 print(t)
 ```
@@ -1984,7 +1984,7 @@ Helloworld
 Hints:
 Use list[::2] to iterate a list by step 2.
 ```python
-r=raw_input()
+r=input()
 r = s[::2]
 print(r)
 ```
