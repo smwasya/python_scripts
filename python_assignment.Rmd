@@ -29,7 +29,7 @@ Suppose the following input is supplied to the program:
 Then, the output should be:
 40320
 
-```python
+```{python}
 # Python program to find the factorial of a number provided by the user.
 
 # change the value for a different result
@@ -60,7 +60,7 @@ Then, the output should be:
 {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
 
-```python
+```{python}
 d = dict()
 k = 5
 for c in range(1,n+1):
@@ -80,7 +80,7 @@ Then, the output should be:
 ('34', '67', '55', '33', '12', '98')
 
 
-```python
+```{python}
 lst = ['2', '3', '4', '4']
 print(lst)
 print(tuple(lst))
@@ -99,7 +99,7 @@ Hints:
 Use __init__ method to construct some parameters
 
 
-```python
+```{python}
 class IOString():
     def __init__(string):
         string.str1 = ""
@@ -135,7 +135,7 @@ Hints:
 If the output received is in decimal form, it should be rounded off to its nearest value (for example, if the output received is 26.0, it should be printed as 26)
 In case of input data being supplied to the question, it should be assumed to be a console input. 
 
-```python
+```{python}
 import math
 
 numbers = input("Provide D: ")
@@ -165,7 +165,7 @@ Then, the output of the program should be:
 Hints:
 Note: In case of input data being supplied to the question, it should be assumed to be a console input in a comma-separated form.
 
-```python
+```{python}
 row_num = int(input("Input number of rows: "))
 col_num = int(input("Input number of columns: "))
 multi_list = [[0 for col in range(col_num)] for row in range(row_num)]
@@ -190,7 +190,7 @@ bag,hello,without,world
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 items = input("Input comma separated sequence of words")
 words = [word for word in items.split(",")]
 print(",".join(sorted(list(set(words)))))
@@ -210,7 +210,7 @@ PRACTICE MAKES PERFECT
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 lines = []
 while True:
     x = input()
@@ -236,7 +236,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 We use set container to remove duplicated data automatically and then use sorted() to sort the data.
 
-```python
+```{python}
 s = input()
 words = [word for word in s.split(" ")]
 print(" ".join(sorted(list(set(words)))))
@@ -254,7 +254,7 @@ Then the output should be:
 Notes: Assume the data is input by console.
 
 
-```python
+```{python}
 value = []
 items=[b for b in input().split(',')]
 for p in items:
@@ -277,7 +277,7 @@ The numbers obtained should be printed in a comma-separated sequence on a single
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 for num in range(1000,3001):
     if all (int(n)%2==0 for n in str(num)):
         print((num), ",",end=" ")
@@ -298,7 +298,7 @@ DIGITS 3
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 st = input("Input a string")
 k=i=0
 for b in s:
@@ -326,7 +326,7 @@ LOWER CASE 9
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 Str="Hello world!"
 lower=0
 upper=0
@@ -351,7 +351,7 @@ Then, the output should be:
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 result=0
 number=input()
 for x in range(1,5):
@@ -371,7 +371,7 @@ Then, the output should be:
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 # create a list with 7 integer elements
 lis=[1,2,3,4,5,6,7,8,9]
 
@@ -403,7 +403,7 @@ Then, the output should be:
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 total = 0
 while True:
     d_w_trans = input()
@@ -442,7 +442,7 @@ ABd1234@1
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 import re
 
 passwords = input("Type in: ")
@@ -493,7 +493,7 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 We use itemgetter to enable multiple sort keys.
 
-```python
+```{python}
 r = []
 while True:
     s = input()
@@ -514,9 +514,9 @@ Define a class with a generator which can iterate the numbers, which are divisib
 
 Hints:
 Consider use yield
-```python
+```{python}
 
-Python
+
 def putNumbers(n):
 
     x = 0
@@ -560,7 +560,7 @@ Then, the output of the program should be:
 
 Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
-```python
+```{python}
 import math
 
 y, z = 0, 0
@@ -610,7 +610,7 @@ to:1
 Hints
 In case of input data being supplied to the question, it should be assumed to be a console input.
 
-```python
+```{python}
 def frequency(input):
     freq = {}
 
@@ -632,7 +632,7 @@ Write a method which can calculate square value of number
 Hints:
 Using the ** operator
 
-```python
+```{python}
 # input a number
 digit = int(input("Enter an integer number: "))
 
@@ -656,7 +656,7 @@ And add document for your own function
 Hints:
 The built-in document method is __doc__
 
-```python
+```{python}
 print(abs.__doc__)
 print(int.__doc__)
 print(input.__doc__)
@@ -681,7 +681,7 @@ Hints:
 Define a instance parameter, need add it in __init__ method
 You can init a object with construct parameter or set the value later
 
-```python
+```{python}
 class individual:
     # Define the class parameter "name"
     name = "individual"
@@ -703,7 +703,7 @@ Define a function which can compute the sum of two numbers.
 Hints:
 Define a function with two numbers as arguments. You can compute the sum in the function and return the value.
 
-```python
+```{python}
 def add_num(a,b):#function for addition
     sum=a+b;
     return sum; #return value
@@ -718,7 +718,7 @@ Hints:
 
 Use str() to convert a number to string.
 
-```python
+```{python}
 def printValue(n):
     print(str(n))
 
@@ -731,7 +731,7 @@ Hints:
 
 Use str() to convert a number to string.
 
-```python
+```{python}
 def printValue(n):
     print(str(n))
 
@@ -744,7 +744,7 @@ Hints:
 
 Use int() to convert a string to integer.
 
-```python
+```{python}
 # function to calculate and return the sum
 # parameters:
 # a, b - integral numbers in string format
@@ -774,7 +774,7 @@ Hints:
 
 Use + to concatenate the strings
 
-```python
+```{python}
 def printValue(s1,s2):
     print(int(s1)+int(s2))
 
@@ -788,7 +788,7 @@ Hints:
 
 Use len() function to get the length of a string
 
-```python
+```{python}
 def printValue(s1,s2):
     len1 = len(s1)
     len2 = len(s2)
@@ -810,7 +810,7 @@ Hints:
 
 Use % operator to check if a number is even or odd.
 
-```python
+```{python}
 def checkValue(n):
     if n%2 == 0:
         print("It is an even number")
@@ -827,7 +827,7 @@ Hints:
 Use dict[key]=value pattern to put entry into a dictionary.
 Use ** operator to get power of a number.
 
-```python
+```{python}
 def printDict():
     d=dict()
     d[1]=1
@@ -846,7 +846,7 @@ Use dict[key]=value pattern to put entry into a dictionary.
 Use ** operator to get power of a number.
 Use range() for loops.
 
-```python
+```{python}
 def printDict():
 	d=dict()
 	for i in range(1,21):
@@ -865,7 +865,7 @@ Use ** operator to get power of a number.
 Use range() for loops.
 Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
 
-```python
+```{python}
 def printDict():
     dict = {i: i**2 for i in range(1, 21)}
     print(dict.keys())      # print keys of a dictionary
@@ -883,7 +883,7 @@ Use ** operator to get power of a number.
 Use range() for loops.
 Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
 
-```python
+```{python}
 def printDict():
     dict = {i: i**2 for i in range(1, 21)}
     print(dict.keys())      # print keys of a dictionary
@@ -901,7 +901,7 @@ Use ** operator to get power of a number.
 Use range() for loops.
 Use list.append() to add values into a list.
 
-```python
+```{python}
 def printList():
 	lis=list()
 	for i in range(1,21):
@@ -920,7 +920,7 @@ Use range() for loops.
 Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
 
-```python
+```{python}
 def printList():
 	lis=list()
 	for i in range(1,21):
@@ -938,7 +938,7 @@ Use ** operator to get power of a number.
 Use range() for loops.
 Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
-```python
+```{python}
 def printList():
 	l=list()
 	for i in range(1,21):
@@ -957,7 +957,7 @@ Use ** operator to get power of a number.
 Use range() for loops.
 Use list.append() to add values into a list.
 Use [n1:n2] to slice a list
-```python
+```{python}
 def printList():
 	l=list()
 	for i in range(1,21):
@@ -976,7 +976,7 @@ Use range() for loops.
 Use list.append() to add values into a list.
 Use tuple() to get a tuple from a list.
 
-```python
+```{python}
 def printDict():
     dict={i:i**2 for i in range(1,21)}   # Using comprehension method and
     print(dict)
@@ -992,7 +992,7 @@ Hints:
 
 Use [n1:n2] notation to get a slice from a tuple.
 
-```python
+```{python}
 tp = (1,2,3,4,5,6,7,8,9,10)
 
 for i in range(0,5):
@@ -1010,7 +1010,7 @@ Hints:
 Use "for" to iterate the tuple
 Use tuple() to generate a tuple from a list.
 
-```python
+```{python}
 tp = (1,2,3,4,5,6,7,8,9,10)
 tp1 = tuple(i for i in tp if i%2 == 0)
 print(tp1)
@@ -1023,7 +1023,7 @@ Hints:
 
 Use if statement to judge condition.
 
-```python
+```{python}
 text = input("Please type something. --> ")
 if text == "yes" or text == "YES" or text == "Yes":
     print("Yes")
@@ -1038,7 +1038,7 @@ Hints:
 Use filter() to filter some elements in a list.
 Use lambda to define anonymous functions.
 
-```python
+```{python}
 def even(x):
     return x%2==0
 
@@ -1051,7 +1051,7 @@ Write a program which can map() to make a list whose elements are square of elem
 Hints
 Use map() to generate a list.
 Use lambda to define anonymous functions.
-```python
+```{python}
 l = [1,2,3,4,5,6,7,8,9,10]
 squaredNumbers = map(lambda x: x**2, l)  # returns map type object data
 print(list(squaredNumbers)) 
@@ -1064,7 +1064,7 @@ Use map() to generate a list.
 Use filter() to filter elements of a list.
 Use lambda to define anonymous functions.
 
-```python
+```{python}
 l = [1,2,3,4,5,6,7,8,9,10]
  
 eve_num = map(lambda x: x**2, filter(lambda   x: x%2==0, l))
@@ -1081,7 +1081,7 @@ Hints:
 Use filter() to filter elements of a list.
 Use lambda to define anonymous functions.
 
-```python
+```{python}
 evenNumbers = filter(lambda x: x%2==0, range(1,21))
 print evenNumbers
 ```
@@ -1092,7 +1092,7 @@ Hints
 Use map() to generate a list.
 Use lambda to define anonymous functions.
 
-```python
+```{python}
 l = range(1,21)
 evenNumbers = map(lambda x: x**2, filter(lambda x: x%2==0, l))
 print evenNumbers
@@ -1103,7 +1103,7 @@ Define a class named American which has a static method called printNationality.
 Hints:
 Use @staticmethod decorator to define class static method.
 
-```python
+```{python}
 class American():
     @staticmethod
     def printNationality():
@@ -1123,7 +1123,7 @@ Define a class named American and its subclass NewYorker.
 Hints:
 
 Use class Subclass(ParentClass) to define a subclass.
-```python
+```{python}
 class American():
     pass
 
@@ -1144,7 +1144,7 @@ Hints:
 
 Use def methodName(self) to define a method.
 
-```python
+```{python}
 class Circle():
     def __init__(self,r):
         self.radius = r
@@ -1163,7 +1163,7 @@ Hints:
 
 Use def methodName(self) to define a method.
 
-```python
+```{python}
 class Rectangle():
     def __init__(self,l,w):
         self.length = l
@@ -1185,7 +1185,7 @@ Hints:
 
 To override a method in super class, we can define a method with the same name in the super class.
 
-```python
+```{python}
 class Shape():
     def __init__(self):
         pass
@@ -1212,7 +1212,7 @@ Please raise a RuntimeError exception.
 Hints:
 
 Use raise() to raise an exception.
-```python
+```{python}
 raise RuntimeError('something wrong')
 ```
 ### Question 56
@@ -1240,7 +1240,7 @@ Hints:
 
 To define a custom exception, we need to define a class inherited from Exception.
 
-```python\
+```{python}
 class MyError(Exception):
     """My own exception class
 
@@ -1272,7 +1272,7 @@ Hints:
 
 Use \w to match letters.
 
-```python
+```{python}
 import re
 
 email = "john@google.com elise@python.com"
@@ -1298,7 +1298,7 @@ Hints:
 
 Use \w to match letters.
 
-```python
+```{python}
 import re
 
 email = "john@google.com elise@python.com"
@@ -1325,7 +1325,7 @@ Hints:
 
 Use re.findall() to find all substring using regex.
 
-```python
+```{python}
 import re
 
 email = input()
@@ -1339,7 +1339,7 @@ Print a unicode string "hello world".
 Hints:
 
 Use u'strings' format to define unicode string.
-```python
+```{python}
 unicodeString = u"hello world!"
 print unicodeString
 ```
@@ -1349,7 +1349,7 @@ Write a program to read an ASCII string and to convert it to a unicode string en
 Hints:
 
 Use unicode() function to convert.
-```python
+```{python}
 o = input()
 l = o.encode('utf-8')
 print(l)
@@ -1360,7 +1360,7 @@ Write a special comment to indicate a Python source code file is in unicode.
 
 Hints: use unicode() function to convert
 
-```python
+```{python}
 
  -*- coding: utf-8 -*-
 ```
@@ -1382,7 +1382,7 @@ In case of input data being supplied to the question, it should be assumed to be
 Hints:
 Use float() to convert an integer to a float
 
-```python
+```{python}
 n=int(input())
 sum=0.0
 for i in range(1,n+1):
@@ -1411,7 +1411,7 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Hints:
 We can define recursive function in Python.
-```python
+```{python}
 def f(n):
     if n == 0:
         return 0
@@ -1422,7 +1422,7 @@ print(f(n))
 
 ```
 #or
-```python
+```{python}
 
 
 
